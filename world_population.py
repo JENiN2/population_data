@@ -1,9 +1,9 @@
 import json
 import pygal.maps.world
+from pygal.maps.world import COUNTRIES
 from pygal.style import RotateStyle as RS, LightColorizedStyle as LCS
 
 from country_codes import get_country_code
-
 # Список заполняется данными.
 filename = "data/population_data.json"
 with open(filename) as f:
@@ -40,3 +40,4 @@ wm.add('10m1-1bn', cc_pops_2)
 wm.add('>1bn', cc_pops_3)
 
 wm.render_to_file('world_population.svg')
+
