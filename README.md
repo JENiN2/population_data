@@ -11,7 +11,7 @@ A program for creating interactive map that shows population on the world. You c
 #### Technologies
 
 - Python Code
-- Pygal
+- [Pygal](https://www.pygal.org/en/stable/)
 
 ## Author Info
 
