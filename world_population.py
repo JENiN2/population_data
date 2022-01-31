@@ -1,3 +1,4 @@
+import sys
 import json
 import argparse
 
@@ -16,6 +17,12 @@ def get_year():
     year = args.year
     print(f'You choose {year}')
     return year
+
+
+def check_year(year):
+    if int(year) > 2010 or int(year) < 1960:
+        print('Wrong year')
+        sys.exit()
 
 
 def get_population_data():
@@ -68,6 +75,7 @@ def create_map(cc_pop_list, year):
 
 if __name__ == '__main__':
     year = get_year()
+    check_year(year)
     get_data = get_population_data()
     processing = PopDataProcessing()
     population = processing.pop_data_processing(get_data, year)
